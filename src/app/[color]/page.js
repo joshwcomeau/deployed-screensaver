@@ -3,7 +3,9 @@ import React from 'react';
 import COLORS from '../../data';
 import ScreenSaver from '../../components/ScreenSaver';
 
-function ScreenSaverExercise({ params }) {
+async function ScreenSaverExercise({ params }) {
+  const { color } = await params;
+
   return (
     <main className="screen-saver-wrapper">
       <ScreenSaver color={params.color} />
